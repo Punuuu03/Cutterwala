@@ -1,0 +1,187 @@
+/* Existing styles */
+.square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -70px;
+  height: 70vh;
+  background-color: #edecec;
+  padding: 0 10px; /* Add horizontal padding to prevent overflow */
+  box-sizing: border-box; /* Ensure padding is included in height and width calculations */
+}
+
+.square-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 0; /* Remove margin to prevent overflow */
+  max-width: 100%; /* Ensure the section doesn't overflow */
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.hex-row-1 .hexagon {
+  margin-left: 0; /* Center the single hexagon */
+}
+
+.hex-row-2 .hexagon:first-child,
+.hex-row-3 .hexagon:first-child {
+  margin-right: 15px;
+}
+
+.hexagon {
+  width: 100px; /* Adjust width for smaller screens */
+  height: 100px; /* Adjust height to maintain aspect ratio */
+  background-color: #9d83e4;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: 5px;
+  background-size: cover;
+  margin-left: 20px;
+}
+
+.square-right-section {
+  text-align: left;
+  font-size: 1.7em;
+  padding-left: 300px; /* Adjust font size for better fit */
+}
+
+.square-right-section ul {
+  list-style-type: disc;
+
+  margin: 0; /* Remove margin to prevent overflow */
+}
+
+.square-right-section li {
+  cursor: pointer;
+  color: #032247;
+  margin-bottom: 8px; /* Adjust bottom margin */
+}
+
+.square-right-section li:hover {
+  text-decoration: underline;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow icons to wrap */
+  justify-content: center; /* Center icons */
+  margin-top: 0;
+}
+
+
+/* Responsive Design */
+/* Extra Large Devices (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .square-container {
+    height: 70vh; /* Adjust height for extra large screens */
+    padding: 0 50px; /* Add extra padding */
+  }
+
+  .square-right-section {
+    font-size: 1.8em; /* Increase font size for larger screens */
+  }
+
+  .hexagon {
+    width: 150px; /* Increase width */
+    height: 150px; /* Increase height */
+  }
+}
+
+/* Large Devices (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .square-container {
+    height: 65vh; /* Slightly reduce height */
+    padding: 0 40px; /* Adjust padding */
+  }
+
+  .square-right-section {
+    font-size: 1.6em; /* Adjust font size */
+  }
+
+  .hexagon {
+    width: 160px; /* Adjust width */
+    height: 184px; /* Adjust height */
+  }
+}
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .square-container {
+    height: 60vh; /* Further reduce height */
+    padding: 0 30px; /* Adjust padding */
+    flex-direction: column; /* Stack sections on top of each other */
+  }
+
+  .square-right-section {
+    padding-left: 0; /* Remove left padding */
+    font-size: 1.4em; /* Adjust font size */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .square-left-section {
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .hexagon {
+    width: 120px; /* Reduce width */
+    height: 138px; /* Adjust height */
+  }
+}
+
+/* Small Tablets and Large Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .square-container {
+    height: auto; /* Let the content dictate height */
+    padding: 20px; /* Add padding */
+  }
+
+  .square-right-section {
+    font-size: 1.2em; /* Adjust font size */
+  }
+
+  .hexagon {
+    width: 100px; /* Further reduce width */
+    height: 115px; /* Adjust height */
+  }
+}
+
+/* Small Mobile Devices (max-width: 575px) */
+@media (max-width: 575px) {
+  .square-container {
+    padding: 15px; /* Adjust padding */
+    flex-direction: column; /* Stack sections */
+    align-items: center; /* Center align content */
+  }
+
+  .square-right-section {
+    padding-left: 0; /* Remove left padding */
+    font-size: 1.1em; /* Adjust font size */
+    text-align: center; /* Center align text */
+  }
+
+  .hexagon {
+    width: 80px; /* Reduce width */
+    height: 92px; /* Adjust height */
+  }
+}
+
+/* Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .square-container {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .square-right-section {
+    font-size: 1em; /* Reduce font size */
+  }
+
+  .hexagon {
+    width: 60px; /* Minimal width */
+    height: 69px; /* Minimal height */
+  }
+}

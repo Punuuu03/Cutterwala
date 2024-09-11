@@ -1,0 +1,251 @@
+/* Container for the entire contact form */
+.unique-contact-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #f7f7f7;
+  height: 800px;
+}
+
+/* Title of the contact form */
+.unique-contact-form-title {
+  font-size: 2.5rem;
+  color: #f7c33d;
+  margin-bottom: 0px;
+}
+
+/* Subtitle of the contact form */
+.unique-contact-form-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+/* Styling the error message below the phone number input */
+.phone-error {
+  color: red;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: -15px;
+}
+
+/* Highlighting the phone input field when it's invalid */
+.unique-form-input.invalid {
+  border: 2px solid red;
+}
+
+/* General form error styling */
+.form-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Content container */
+.unique-contact-form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Contact info box */
+.unique-contact-info {
+  background-color: #9595de;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 40%;
+  height: 500px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.unique-contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.unique-contact-info p {
+  margin-bottom: 30px;
+}
+
+.unique-contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.unique-contact-info li {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.unique-contact-info i {
+  margin-right: 10px;
+  
+}
+
+/* Form section */
+.unique-form-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 45%;
+  height: 500px;
+  box-shadow: 0px 5px 15px rgba(140, 137, 196, 0.1);
+}
+
+/* Grouping input fields */
+.unique-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Input field styling */
+.unique-form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.unique-form-input::placeholder {
+  color: #050101;
+}
+
+/* Textarea styling */
+textarea.unique-form-input {
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+/* Submit button styling */
+.unique-form-submit-button {
+  background-color: #b3b3ec;
+  color: #fff;
+  padding: 15px 30px;
+  margin-top: 60px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.file-error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+
+.unique-form-submit-button:hover {
+  background-color: #f7c33d;
+  color: #333;
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 992px) {
+  .unique-contact-form-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unique-contact-info
+  {
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+  
+  }
+  .unique-form-section {
+    width: 100%;
+    height: auto;
+    
+    
+  
+  }
+
+  .unique-form-group {
+    margin-bottom: 20px;
+  }
+
+  .unique-form-input {
+    width: 100%;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .unique-contact-form-title {
+    font-size: 2rem;
+  }
+
+  .unique-contact-form-subtitle {
+    font-size: 1rem;
+  }
+
+  .unique-contact-info {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: -30px;
+  }
+
+  .unique-form-section {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+   
+  }
+
+  .unique-form-submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 576px) {
+  .unique-contact-form-title {
+    font-size: 1.5rem;
+  }
+
+  .unique-contact-form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .unique-contact-info {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .unique-form-section {
+    padding: 15px;
+    width: 100%;
+    height: auto;
+  }
+
+  .unique-form-submit-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .unique-form-input {
+    font-size: 0.9rem;
+  }
+
+  textarea.unique-form-input {
+    height: 120px; /* Adjust textarea height for small screens */
+  }
+}

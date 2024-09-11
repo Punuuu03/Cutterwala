@@ -1,0 +1,170 @@
+/* General Container Styles */
+.about-us-container, .vision-mission-content {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Vision & Mission Section Styles */
+.vision-mission-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Logo Styles */
+.vision-mission-logo {
+  margin-bottom: 20px;
+}
+
+.vision-mission-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Heading Styles */
+.vision-mission-content h3 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #022d54;
+}
+
+/* Paragraph Styles */
+.vision-mission-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* About Us Section Styles */
+.about-us-content {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-us-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-us-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Founder Message Section Styles */
+.founder-message {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 4px solid #007bff;
+  background-color: #f1f1f1;
+  text-align: left; /* Align text to the left for a more traditional blockquote style */
+}
+
+.founder-message p {
+  font-size: 18px;
+  color: #333;
+}
+
+.founder-message .quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.8;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Responsive Styles */
+
+/* Tablets and Larger Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .vision-mission-content h3 {
+    font-size: 22px;
+  }
+
+  .vision-mission-logo img {
+    width: 120px;
+  }
+
+  .about-us-content h2 {
+    font-size: 24px;
+  }
+
+  .vision-mission-content p, .about-us-content p, .founder-message p {
+    font-size: 15px;
+  }
+
+  .about-us-container, .vision-mission-content {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .vision-mission-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .vision-mission-logo img {
+    width: 100px;
+  }
+
+  .about-us-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .vision-mission-content p, .about-us-content p, .founder-message p {
+    font-size: 14px;
+  }
+
+  .about-us-container, .vision-mission-content {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .founder-message {
+    padding: 15px;
+  }
+}
+
+/* Very Small Mobile Devices (max-width: 320px) */
+@media (max-width: 320px) {
+  .vision-mission-content h3 {
+    font-size: 18px;
+  }
+
+  .vision-mission-logo img {
+    width: 80px;
+  }
+
+  .about-us-content h2 {
+    font-size: 20px;
+  }
+
+  .vision-mission-content p, .about-us-content p, .founder-message p {
+    font-size: 13px;
+  }
+
+  .about-us-container, .vision-mission-content {
+    margin: 5px;
+    padding: 8px;
+  }
+
+  .founder-message {
+    padding: 10px;
+  }
+}

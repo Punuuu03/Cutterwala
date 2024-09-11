@@ -1,0 +1,174 @@
+/* General container styling */
+.secumax150-container {
+  margin-top: 50px;
+  margin-left: 0px;
+  padding-left: 150px;
+  padding-right: 100px;
+}
+
+/* Flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 100%; /* Larger width */
+  height: 340px; /* Adjusted height */
+  perspective: 1000px;
+  margin-bottom: 20px;
+  margin-right: 0px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  transition-delay: 0.2s;
+  transition-duration: 1s;
+}
+
+/* Front and back card styling */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease-in-out;
+}
+
+.flip-card-front {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.flip-card-back {
+  background-color: #f0f8ff;
+  color: black;
+  transform: rotateY(180deg) scale(1);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Specific section styling */
+.secumax150-section {
+  text-align: left;
+  width: 100%;
+}
+
+.secumax150-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+.secumax150-info {
+  font-size: 1rem;
+  line-height: 1.2;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+
+/* Image container styling */
+.secumax150-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.secumax150-images img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+/* Button styling */
+.express-interest-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.express-interest-button:hover {
+  background-color: #0056b3;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+.secumax150-container {
+  padding-left: 50px;
+  padding-right: 30px;
+}
+
+.flip-card {
+  width: 80%; /* Reduced width for tablets */
+  height: auto;
+}
+
+.secumax150-images {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
+}
+
+@media (max-width: 768px) {
+.secumax150-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flip-card {
+  width: 100%; /* Full width for mobile */
+  height: 300px; /* Reduced height for mobile */
+}
+
+.secumax150-images {
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.express-interest-button {
+  width: 40%;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 480px) {
+.secumax150-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flip-card {
+  width: 100%; /* Full width for small mobile screens */
+  height: 250px; /* Further reduced height for small screens */
+}
+
+.express-interest-button {
+  padding: 8px;
+  font-size: 0.8rem;
+}
+}
+

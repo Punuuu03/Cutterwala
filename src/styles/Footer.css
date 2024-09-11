@@ -1,0 +1,170 @@
+/* Existing styles */
+.footer {
+  background-color: #060224;
+  color:white;
+  padding: 30px 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo-text span {
+  color:#f57c00;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section.links {
+  margin-top: 0px;
+}
+
+.footer-section.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section.links ul li a {
+  color: #fefdfd;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.footer-icon {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.footer-section.contact-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.social-icons {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons > * {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Add to your existing CSS */
+
+/* Adjust layout for mobile view */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .footer-section.links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .footer-section.links ul li {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  /* Address, phone, email in one row with links */
+  .footer-section.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer-section.contact-info p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    align-items: center;
+  
+  }
+
+  .footer-section {
+    text-align: center;
+    
+  }
+
+  .footer-section.links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer-section.contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section.contact-info p {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .footer-bottom {
+    padding-top: 5px;
+  }
+}

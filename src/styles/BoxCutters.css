@@ -1,0 +1,222 @@
+/* General container styling */
+.boxcutters-container {
+    margin-top: 50px;
+    margin-left: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 100%; /* Full width */
+    height: 350px; /* Adjusted height */
+    perspective: 1000px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+
+/* Flex container for images in rows */
+.boxcutters-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px; /* Reduced gap between cards */
+    margin-bottom: 30px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px;  /* Distance from the right */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem; /* Adjust font size as needed */
+}
+
+/* Image styling */
+.boxcutters-images img {
+    width: 70%; /* Adjusted width to fit within flip card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Card inner styling */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back card styling */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.flip-card-back {
+    background-color: #f0f8ff;
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 10px; /* Adjust padding */
+    box-sizing: border-box;
+}
+
+/* Specific section styling */
+.boxcutters-section {
+    text-align: left;
+    width: 100%;
+}
+
+.boxcutters-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.boxcutters-info {
+    font-size: 1rem;
+    line-height: 1.2;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Button styling */
+.express-interest-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.express-interest-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .boxcutters-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .boxcutters-images {
+        gap: 60px; /* Adjusted gap for smaller screens */
+    }
+
+    .flip-card {
+        height: 300px; /* Adjusted height for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .boxcutters-container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .boxcutters-images {
+        gap: 30px; /* Further reduced gap for smaller screens */
+    }
+
+    .flip-card {
+        height: 250px; /* Adjusted height for smaller screens */
+    }
+
+    .boxcutters-heading {
+        font-size: 1rem; /* Smaller font size for medium screens */
+    }
+
+    .boxcutters-info {
+        font-size: 0.9rem; /* Smaller font size for medium screens */
+    }
+
+    .express-interest-button {
+        padding: 10px 20px; /* Smaller button padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .boxcutters-container {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .boxcutters-images {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Small gap for small screens */
+    }
+
+    .flip-card {
+        height: 200px; /* Adjusted height for small screens */
+    }
+
+    .boxcutters-images img {
+        width: 70%; /* Reduced image width for small screens */
+    }
+
+    .boxcutters-heading {
+        font-size: 0.9rem; /* Smaller font size for small screens */
+    }
+
+    .boxcutters-info {
+        font-size: 0.8rem; /* Smaller font size for small screens */
+    }
+
+    .express-interest-button {
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .boxcutters-images img {
+        width: 55%; /* Further reduced image width for extra small screens */
+    }
+
+    .boxcutters-heading {
+        font-size: 0.8rem; /* Smaller font size for extra small screens */
+    }
+
+    .boxcutters-info {
+        font-size: 0.7rem; /* Smaller font size for extra small screens */
+    }
+
+    .express-interest-button {
+        padding: 6px 10px; /* Smaller button padding */
+        font-size: 0.7rem; /* Smaller font size */
+    }
+}

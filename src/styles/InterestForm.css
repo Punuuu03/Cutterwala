@@ -1,0 +1,134 @@
+.interest-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .interest-form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  /* Styling the error message */
+.form-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Highlighting the contact field when it's invalid */
+input[name="contact"].invalid {
+  border: 2px solid red;
+}
+
+  
+  .interest-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex: 1 1 45%;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .label-icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  /* Icon-specific colors */
+  .label-icon.user-icon {
+    color: #f44336; /* Red */
+  }
+  
+  .label-icon.email-icon {
+    color: #2196f3; /* Blue */
+  }
+  
+  .label-icon.phone-icon {
+    color: #4caf50; /* Green */
+  }
+  
+  .label-icon.product-icon {
+    color: #9c27b0; /* Purple */
+  }
+  
+  .label-icon.quantity-icon {
+    color: #ff5722; /* Deep Orange */
+  }
+  
+  .label-icon.date-icon {
+    color: #ff9800; /* Orange */
+  }
+  
+  .label-icon.reason-icon {
+    color: #009688; /* Teal */
+  }
+  
+  .label-icon.location-icon {
+    color: #795548; /* Brown */
+  }
+  
+  .label-icon.delivery-icon {
+    color: #3f51b5; /* Indigo */
+  }
+  
+  .interest-form input[type="text"],
+  .interest-form input[type="email"],
+  .interest-form input[type="number"],
+  .interest-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .full-width {
+    flex: 1 1 100%;
+  }
+  
+  .interest-form .delivery-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px; /* Added padding to space out from the label */
+    margin-top: 10px; /* Added margin to create a gap between the label and options */
+  }
+  
+  .interest-form input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .submit-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+    width:50%;
+    margin: 0 auto;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,178 @@
+.product-display {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding: 70px;
+  height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: -30px;
+}
+
+.product-card {
+  width: 420px; /* Fixed width for uniformity */
+  height: 320px; /* Fixed height for uniformity */
+  perspective: 1000px; /* Adds perspective for 3D effect */
+  position: relative; /* Ensures correct positioning of child elements */
+}
+
+.product-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s; /* Adjusted transition time */
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); /* Ensures initial state */
+}
+
+.product-card:hover .product-card-inner {
+  transform: rotateY(180deg);
+}
+
+.product-card-front,
+.product-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 1.6s; /* Smooth transition for background color */
+}
+
+.product-card-front {
+  background-color: #f0f0f0;
+}
+
+.product-card-back {
+  background-color: #ffffff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.product-image {
+  width: 100%;
+  height: 225px; /* Adjust based on needs */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name-front {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center; /* Center text */
+}
+
+.product-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.product-info h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Increase font size for better visibility */
+  font-weight: bold; 
+  margin-bottom: 20px;/* Make title bold */
+}
+
+.product-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0; /* Add vertical margin */
+  width: 100%; /* Ensure full width */
+}
+
+.product-info li {
+  margin-bottom: 10px;
+  font-size: 16px; /* Increase font size for readability */
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.product-info li::before {
+  content: "";
+  font-weight: bold;
+}
+
+.product-info li span {
+  font-weight: bold; /* Make text before colon bold */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-display {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .product-card {
+    width: 350px; /* Adjust width for smaller screens */
+    height: 280px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-display {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .product-card {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Adjust height proportionally */
+  }
+
+  .product-info h3 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .product-info li {
+    font-size: 14px; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-display {
+    padding: 10px;
+    gap: 15px;
+    margin-bottom: 1000px;
+  }
+
+  .product-card {
+    width: 100%; /* Full width for very small screens */
+    height: 250px; /* Adjust height proportionally */
+  }
+
+  .product-info h3 {
+    font-size: 18px; /* Adjust font size for very small screens */
+  }
+
+  .product-info li {
+    font-size: 12px; /* Adjust font size for very small screens */
+  }
+}

@@ -1,0 +1,167 @@
+.impact-section {
+  background-color: #ebedf3;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.impact-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #f57c00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.impact-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow-left, .arrow-right {
+  color: #060224;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  transform: scale(1.3);
+}
+
+.impact-cards-container {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  flex-grow: 1;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.impact-card {
+  background-color: #e3e4e8;
+  border-radius: 20px;
+  color:black;
+  padding: 40px;
+  max-width: 450px;
+  min-width: 300px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.impact-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.impact-card-title {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.impact-card-text {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.impact-card-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.star {
+  color: #f57c00;
+  font-size: 24px;
+}
+
+.star.empty {
+  color: #cccccc;
+}
+
+.slide-animation {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+/* Responsive Styles for Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Adjusting the overall section padding and font sizes */
+  .impact-section {
+    padding: 30px 15px; /* Reduce padding for better fit */
+  }
+
+  .impact-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Making carousel arrows smaller and adjusting padding */
+  .arrow-left, .arrow-right {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  /* Making carousel flexible for single-column layout */
+  .impact-carousel {
+    flex-direction: column;
+    align-items: center; /* Center items for a better look */
+  }
+
+  .impact-cards-container {
+    gap: 15px; /* Reduced gap for better fit */
+    flex-direction: column;
+    width: 100%; /* Ensure cards take full width */
+    overflow: visible; /* Ensure all content is visible */
+  }
+
+  .impact-card {
+    width: 90%; /* Slightly smaller width to ensure padding */
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: none; /* Simplify shadow for mobile */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    word-wrap: break-word; /* Prevent text overflow */
+  }
+
+  /* Adjusting card content sizing */
+  .impact-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .impact-card-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  /* Reducing star size for mobile */
+  .star {
+    font-size: 18px;
+  }
+
+  /* Adjusting the carousel transition for smoother mobile experience */
+  .slide-animation {
+    animation: slideInFromLeft 0.4s ease-in-out;
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,216 @@
+.custom-enquiry-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.custom-form-error {
+  color:red; /* Red color for errors */
+  font-size: 0.875rem; /* Smaller font size */
+  margin-top: 0.5rem; /* Space above the error message */
+  margin-bottom: -0.4rem; /* Space below the error message */
+  padding: 0.5rem; /* Padding around the error message */
+  /* Red border */
+   /* Rounded corners */
+   /* Light red background */
+}
+
+.custom-enquiry-form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 550px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.custom-enquiry-form-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.custom-enquiry-form-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.custom-enquiry-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.custom-form-group:not(:last-child) {
+  margin-right: 10px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.custom-submit-button {
+  padding: 10px;
+  background-color: #004085;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-submit-button:hover {
+  background-color: #003366;
+}
+
+.custom-contact-info {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #444;
+}
+
+.custom-contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.custom-contact-info p svg {
+  margin-right: 8px;
+  color: #0056b3; /* Icon color */
+  font-size: 18px;
+}
+
+.custom-contact-info p span {
+  font-weight: 500; /* Medium weight for better readability */
+}
+@media (max-width: 768px) {
+  .custom-enquiry-form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .custom-enquiry-form-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .custom-enquiry-form-subtitle {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .custom-form-row {
+    flex-direction: column; /* Stack the form fields vertically on small screens */
+  }
+
+  .custom-form-group {
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .custom-submit-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .custom-contact-info {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+
+  .custom-contact-info p {
+    margin: 5px 0;
+  }
+
+  .custom-contact-info p svg {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-enquiry-form-container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .custom-enquiry-form-title {
+    font-size: 18px;
+  }
+
+  .custom-enquiry-form-subtitle {
+    font-size: 11px;
+  }
+
+  .custom-form-group {
+    margin-bottom: 8px;
+  }
+
+  .custom-submit-button {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .custom-contact-info {
+    font-size: 11px;
+  }
+
+  .custom-contact-info p {
+    margin: 4px 0;
+  }
+
+  .custom-contact-info p svg {
+    font-size: 14px;
+  }
+}
+

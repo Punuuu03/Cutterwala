@@ -1,0 +1,130 @@
+/* Existing styles */
+.sliding-section {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.sliding-images-container {
+  display: flex;
+  margin-top: -320px;
+  width: 100%;
+  height: 50%;
+  transition: transform 1s ease-in-out; /* Smooth transition effect */
+  
+}
+
+.sliding-image {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-container {
+  position: absolute;
+  display: flex;
+  margin-top:-200px;
+  justify-content: space-between;
+  width: 80%;
+  color: white;
+  margin-left: 120px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.list-left, .list-right {
+  list-style-type: disc; /* Show bullet points */
+  padding-left: 20px; /* Add padding to ensure bullets are visible */
+  margin: 0; /* Remove default margin */
+}
+
+.products-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.products-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sliding-section {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .content-container {
+    width: 90%; /* Increase width for smaller screens */
+    padding: 15px; /* Reduce padding */
+    flex-direction: column; /* Stack lists vertically */
+    align-items: center; /* Center-align lists */
+  }
+
+  .list-left, .list-right {
+    padding-left: 0; /* Remove left padding for mobile view */
+    text-align: center; /* Center-align text */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  
+  .products-button {
+    bottom: 10px; /* Adjust button position for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sliding-section {
+    height: 300px; /* Further reduce height */
+  }
+
+  .content-container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .list-left, .list-right {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .products-button {
+    bottom: 5px; /* Further adjust button position */
+    padding: 8px 16px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .sliding-section {
+    height: 500px; /* Minimal height */
+  }
+
+  .content-container {
+    width: 100%; 
+    height:33%;/* Full width for smallest screens */
+    padding: 5px; /* Minimal padding */
+    flex-direction: column; /* Stack lists vertically */
+    align-items: center; 
+    margin-top: -300px;
+    margin-left: -10px;/* Center-align lists */
+  }
+
+  .list-left, .list-right {
+    font-size: 12px; /* Minimal font size */
+    padding-left: 0; /* Remove padding */
+    margin-bottom: 15px; /* Add margin for spacing */
+  }
+
+  .products-button {
+    bottom: 5px; /* Adjust button position */
+    padding: 5px 10px; /* Minimal padding */
+    font-size: 12px; /* Adjust font size */
+  }
+}

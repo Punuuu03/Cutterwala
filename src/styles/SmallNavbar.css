@@ -1,0 +1,54 @@
+/* Small Navbar Styles */
+.small-navbar {
+  background-color: #fbfcfd;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact info styling */
+.contact-info {
+  display: flex;
+  gap: 20px; /* Adjust gap for better spacing on small screens */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .small-navbar {
+    padding: 5px 10px;
+  }
+
+  .contact-info {
+    gap: 10px; /* Reduced gap for smaller screens */
+    font-size: 12px; /* Smaller font size for better fit */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .small-navbar {
+    padding: 5px 5px;
+  }
+
+  .contact-info {
+    gap: 5px; /* Minimal gap for very small screens */
+  }
+
+  .contact-item {
+    font-size: 10px;
+  }
+}
